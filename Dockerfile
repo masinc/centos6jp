@@ -3,7 +3,8 @@ FROM centos:centos6
 MAINTAINER masinc
 
 RUN yum -y update &&\
-    yum reinstall -y glibc-common
+    yum reinstall -y glibc-common &&\
+    yum clean all
 
 ENV LANG="ja_JP.UTF-8" \
     LANGUAGE="ja_JP:ja" \
